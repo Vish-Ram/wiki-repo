@@ -1,0 +1,20 @@
+<div id = 'box_1'>
+  <h1 align='center'>Schools</h1>
+  <div class="row">
+    <div class="col-md-">
+      <% @pages.each do |page| %>
+        <div class="media">
+         <div class="media-body">
+            <h4 class="media-heading">
+              <%= link_to page.name, page %>
+            </h4>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>  
+</div>
+
+<div id = 'box_2'>
+  <h2 align='center'>Peek a bit!</h2>
+</div>
