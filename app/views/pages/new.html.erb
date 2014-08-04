@@ -1,2 +1,35 @@
-<h1>Pages#new</h1>
-<p>Find me in app/views/pages/new.html.erb</p>
+<div id='box_3'>
+<h1>New School</h1>
+
+<div class='row'>
+  <div class = 'col-md-2'>
+    <p>Guidelines</p>
+    <ul>
+      <li>Enter the school name.</li>
+      <li>Enter the names of sections (each section denoted by a comma after typing it) in the contents box.</li>
+      <li>Then use markdown syntax if necessary to write your content.</li>
+    </ul>
+  </div>
+  <div class="col-md-8">
+    <%= form_for @page do |f| %>
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-control', placeholder: "Enter school name" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :sections %>
+        <%= f.text_area :sections, class: 'form-control', placeholder: "Enter section names." %>
+      </div>
+      <h2>Powered by: <img src="http://epiceditor.com/docs/images/epiceditor-logo.png" alt="EpicEditor"></h2>  
+      <div id = 'box_4'>
+        <div id="epiceditor">
+          <%= f.text_area :body, id: 'my-edit-area', :rows => 50, :cols => 100 %>
+        </div>
+        </div>
+      <div class="form-group">
+        <%= f.submit "Create School info", class: 'btn btn-success' %>
+      </div>
+    <% end %>
+  </div>
+</div>
+</div>

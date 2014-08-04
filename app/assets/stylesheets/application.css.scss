@@ -4,6 +4,11 @@
   width: 100%;
 }
 
+.container {
+  background-color: #8D8DE8;
+  width:100%
+}
+
 #box_1 { 
   position: absolute;
   top: 0;
@@ -21,3 +26,24 @@
   left: 80%; 
   background: #C96464;
 }
+
+#box_3{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #E6B280;
+}
+
+#box_4{
+  padding: 0px;
+  background: #FFFFFF;
+}
+
+@import 'base/epiceditor';  
+@import 'preview/bartik';  
+@import 'preview/github';  
+@import 'preview/preview-dark';  
+@import 'editor/epic-dark';  
+@import 'editor/epic-light';  
