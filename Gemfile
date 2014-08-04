@@ -18,6 +18,8 @@ gem 'sass-rails', '~> 4.0.2'
 
 gem 'bootstrap-sass', '~> 3.1.1'
 
+gem 'figaro'
+
 gem 'redcarpet'
 
 gem 'epic-editor-rails'
