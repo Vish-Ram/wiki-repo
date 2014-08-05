@@ -5,9 +5,10 @@
   <div class = 'col-md-2'>
     <p>Guidelines</p>
     <ul>
-      <li>Enter the school name.</li>
-      <li>Enter the names of sections (each section denoted by a comma after typing it) in the contents box.</li>
-      <li>Then use markdown syntax if necessary to write your content.</li>
+      <li>Use markdown syntax if necessary to write your content.</li>
+      <li>Seperate the sections by
+      <li>Include the Sections you specify within the Sections field within the black editor</li>
+      <li>It would be easier to use the fullscreen option of the editor</li>
     </ul>
   </div>
   <div class="col-md-8">
@@ -20,12 +21,13 @@
         <%= f.label :sections %>
         <%= f.text_area :sections, class: 'form-control', placeholder: "Enter section names." %>
       </div>
-      <h2>Powered by: <img src="http://epiceditor.com/docs/images/epiceditor-logo.png" alt="EpicEditor"></h2>  
+      <p>Powered by: <img src="http://epiceditor.com/docs/images/epiceditor-logo.png" alt="EpicEditor"></p>  
       <div id = 'box_4'>
         <div id="epiceditor">
+          <%= f.label :body %>
           <%= f.text_area :body, id: 'my-edit-area', :rows => 50, :cols => 100 %>
         </div>
-        </div>
+      </div>
       <div class="form-group">
         <%= f.submit "Create School info", class: 'btn btn-success' %>
       </div>

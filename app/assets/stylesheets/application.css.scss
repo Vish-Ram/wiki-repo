@@ -1,4 +1,16 @@
 @import "bootstrap";
+
+li {
+  color: black;
+}
+
+p {
+  color: black;
+}
+
+label {
+  color: black;
+}
 .jumbotron {
   background-color: #FFFFF0;
   width: 100%;
@@ -40,6 +52,14 @@
   padding: 0px;
   background: #FFFFFF;
 }
+
+ .user-info {
+   margin-top: 9px;
+ }
+ 
+ .nav {
+   margin-top: 5px;
+ }
 
 @import 'base/epiceditor';  
 @import 'preview/bartik';  

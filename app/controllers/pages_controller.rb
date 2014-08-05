@@ -5,6 +5,8 @@ class PagesController < ApplicationController
 
   def show
     @page = Page.find(params[:id])
+    @sections = params[:page][:sections].split(", ")
+    @page.sections = @sections
   end
 
   def new
@@ -13,13 +15,12 @@ class PagesController < ApplicationController
 
   def create 
     @page = Page.new(page_params)
-    @sections = params[:page][:sections].split(",")
-    @page.sections = @sections
+    # @sections = params[:page][:sections].split(", ")
+    # @page.sections = @sections
     @page.save
 
-    respond_with(@page) do |format|
-      format.html {redirect_to []}
-    end
+    redirect_to [@page]
+    
   end
 
   def edit
@@ -29,14 +30,14 @@ class PagesController < ApplicationController
   def update
     @page = Page.find(params[:id])
     @page.update_attributes(page_params)
-    @sections = params[:page][:sections].split(",")
-    @page.sections = @sections
+    # @sections = params[:page][:sections].split(", ")
+    # @page.sections = @sections
     @page.save
   end
 
   private
 
   def page_params
-    params.require(:page).permit(:name, :body, :sections)
+    params.require(:page).permit(:name, :sections, :body)
   end
 end
