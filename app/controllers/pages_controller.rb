@@ -5,7 +5,8 @@ class PagesController < ApplicationController
 
   def show
     @page = Page.find(params[:id])
-    @sections = params[:page][:sections].split(", ")
+    #@sections = params[:page][:sections].split(", ")
+    @sections = @page.sections.split(", ")
     @page.sections = @sections
   end
 
@@ -14,6 +15,8 @@ class PagesController < ApplicationController
   end
 
   def create 
+    #params[:body] = params[:hidden_body]
+
     @page = Page.new(page_params)
     # @sections = params[:page][:sections].split(", ")
     # @page.sections = @sections

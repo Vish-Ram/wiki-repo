@@ -24,14 +24,27 @@
       <p>Powered by: <img src="http://epiceditor.com/docs/images/epiceditor-logo.png" alt="EpicEditor"></p>  
       <div id = 'box_4'>
         <div id="epiceditor">
-          <%= f.label :body %>
-          <%= f.text_area :body, id: 'my-edit-area', :rows => 50, :cols => 100 %>
+          <%= f.text_area :body, id: 'edit-area' %>
         </div>
       </div>
       <div class="form-group">
-        <%= f.submit "Create School info", class: 'btn btn-success' %>
+        <%= f.submit "Create School info", class: 'btn btn-success', id: 'editor-submit' %>
       </div>
     <% end %>
   </div>
 </div>
 </div>
+
+<!--<script>
+  document.getElementByValue("Create School info").onclick = function () {
+  $("#body").value = editor.getElement('editor').body.innerHTML(); // Returns the editor's content
+}
+</script>-->
+
+<!--<script>
+  $('#editor-submit').on('click', function {
+  value = $('epiceditor #body').innerHTML();
+  body = $('edit-area');
+  body.val(value);
+}
+</script>-->

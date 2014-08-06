@@ -1,6 +1,9 @@
-<%= markdown @page.name %>
-  <div class='jumbotron'>
-    <% @sections.each_with_index do |section| %>
-      <% 
+<h1><%= markdown @page.name %></h1> 
+<div class='jumbotron'>
+    <% @sections.each_with_index do |section, index| %>
+      <% secNo = index + 1 %>
+      <a href ="<%= index %>"><%= secNo.to_s + "  " + section %></a><br>
     <% end %>
-  </div>
+</div>
+<p><%= markdown @page.body %></p>
+
